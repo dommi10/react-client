@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import { CButton } from "./components/atoms/button";
+import { Label } from "./components/atoms/label";
+import { Paragraph } from "./components/atoms/paragraph";
+import { Input } from "./components/atoms/input";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Label />
+      <div className="row m-5">
+        <div className="col-md">
+          <Paragraph text="this is the first text of a paragraph with atomic design in react, it's not a story book but a way to design things" />
+        </div>
+        <div className="col-md">
+          <Input />
+        </div>
+      </div>
+      <CButton name="Envoyer" />
     </div>
   );
 }
